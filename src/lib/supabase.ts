@@ -2,8 +2,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient } from '@supabase/supabase-js';
 import { AppState, Platform } from 'react-native';
 
-const url = process.env.EXPO_PUBLIC_SUPABASE_URL ?? '';
-const anonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? '';
+// Die URL und der "anon" Key sind öffentlich (sie stecken in jeder App-Kopie).
+// Die Daten schützen die Sicherheitsregeln in der Datenbank. Mit einer .env-Datei
+// kann man auf ein anderes Supabase-Projekt umstellen.
+const DEFAULT_URL = 'https://znmvawckgybuwhwloxmz.supabase.co';
+const DEFAULT_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpubXZhd2NrZ3lidXdod2xveG16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUwMjYzNDAsImV4cCI6MjExMDYwMjM0MH0.RAHr8kdQuuCXj1A6Dlb8XGNXqlj4i0M-C1_Oz9nmA2E';
+
+const url = process.env.EXPO_PUBLIC_SUPABASE_URL || DEFAULT_URL;
+const anonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || DEFAULT_ANON_KEY;
 
 export const isConfigured = url.startsWith('https://') && anonKey.length > 20;
 

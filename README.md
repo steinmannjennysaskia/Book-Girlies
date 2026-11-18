@@ -30,9 +30,10 @@ Eine Handy-App (iPhone und Android) zum gemeinsamen Lesen: Buddy Reads mit spoil
 
 ### 2. App starten
 
+Die App ist schon mit dem Supabase-Projekt verbunden (siehe `src/lib/supabase.ts`). Für ein anderes Projekt `.env.example` zu `.env` kopieren und die Werte eintragen.
+
 ```bash
 npm install
-cp .env.example .env   # dann die zwei Werte aus Supabase eintragen
 npx expo start
 ```
 
