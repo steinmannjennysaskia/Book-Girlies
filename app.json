@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Book Girlies",
+    "slug": "book-girlies",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bookgirlies.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F7EFE4",
+        "foregroundImage": "./assets/icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.bookgirlies.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-image"
+    ],
+    "scheme": "bookgirlies",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
